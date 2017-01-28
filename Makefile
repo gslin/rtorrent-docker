@@ -15,3 +15,6 @@ clean:
 
 run:
 	docker run -e USER_GID="${USER_GID}" -e USER_UID="${USER_UID}" -i -p 6991 -t -v "${CUR_PATH}:/srv/rtorrent" gslin/rtorrent:latest
+
+push:
+	docker push gslin/rtorrent
