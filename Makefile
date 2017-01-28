@@ -10,7 +10,8 @@ build:
 	docker tag "gslin/rtorrent:${NOW}" gslin/rtorrent:latest
 
 clean:
-	docker images | grep ^gslin/rtorrent | awk '{print $$1 ":" $$2}' | xargs -n1 docker rmi
+	docker ps --all | grep Exited | awk '{print $$1}' | xargs docker rm || true
+	docker images | grep ^gslin/rtorrent | awk '{print $$1 ":" $$2}' | xargs -n1 docker rmi || true
 
 run:
 	docker run -e USER_GID="${USER_GID}" -e USER_UID="${USER_UID}" -i -p 6991 -t -v "${CUR_PATH}:/srv/rtorrent" gslin/rtorrent:latest
