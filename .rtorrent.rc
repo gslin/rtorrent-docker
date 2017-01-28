@@ -1,0 +1,9 @@
+check_hash = no
+encoding_list = UTF-8
+encryption = allow_incoming,try_outgoing,enable_retry
+max_peers = 4096
+max_uploads = 2048
+min_peers = 2048
+port_range = 6991-6991
+protocol.pex.set = yes
+session = /srv/rtorrent/session
