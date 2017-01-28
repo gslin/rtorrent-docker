@@ -1,5 +1,5 @@
 #
-FROM ubuntu:xenial
+FROM ubuntu:xenial-20170119
 MAINTAINER gslin@gslin.org
 
 #
