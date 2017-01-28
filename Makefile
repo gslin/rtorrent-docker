@@ -9,5 +9,8 @@ build:
 	docker build -t "gslin/rtorrent:${NOW}" .
 	docker tag "gslin/rtorrent:${NOW}" gslin/rtorrent:latest
 
+clean:
+	docker images | grep ^gslin/rtorrent | awk '{print $$1 ":" $$2}' | xargs -n1 docker rmi
+
 run:
 	docker run -e USER_GID="${USER_GID}" -e USER_UID="${USER_UID}" -i -p 6991 -t -v "${CUR_PATH}:/srv/rtorrent" gslin/rtorrent:latest
