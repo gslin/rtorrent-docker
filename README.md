@@ -1,4 +1,4 @@
-Running [rtorrent](https://github.com/rakshasa/rtorrent) in [Docker](https://www.docker.com/) container.
+Running [rTorrent](https://github.com/rakshasa/rtorrent) in [Docker](https://www.docker.com/) container.
 
 Command
 =======
