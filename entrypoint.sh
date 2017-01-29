@@ -1,12 +1,12 @@
 #!/bin/bash
 
-if [[ "x${USER_UID}" = x ]]; then
-    echo "USER_UID is empty."
+if [[ "x${USER_GID}" = x ]]; then
+    echo "USER_GID is empty."
     exit 1
 fi
 
-if [[ "x${USER_GID}" = x ]]; then
-    echo "USER_GID is empty."
+if [[ "x${USER_UID}" = x ]]; then
+    echo "USER_UID is empty."
     exit 1
 fi
 
