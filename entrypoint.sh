@@ -11,7 +11,7 @@ if [[ "x${USER_UID}" = x ]]; then
     echo "USER_UID is empty."
     exit 1
 else
-    useradd -d /home/rtorrent -f -g "${USER_GID}" -m -s /bin/bash -u "${USER_UID}" rtorrent
+    useradd -d /home/rtorrent -g "${USER_GID}" -m -s /bin/bash -u "${USER_UID}" rtorrent
 fi
 
 su - rtorrent -c "cd /srv/rtorrent; mkdir -p session; rtorrent"
