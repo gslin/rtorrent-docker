@@ -1,7 +1,7 @@
 rtorrent-docker
 ===============
 
-Running [rTorrent](https://github.com/rakshasa/rtorrent) in [Docker](https://www.docker.com/) container.
+Running [rTorrent](https://github.com/rakshasa/rtorrent) in [Docker](https://www.docker.com/) container, based on Ubuntu 16.04 and [crass](https://launchpad.net/~crass)' [libtorrent PPA](https://launchpad.net/~crass/+archive/ubuntu/libtorrent).
 
 Command
 -------
