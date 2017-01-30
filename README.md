@@ -3,4 +3,4 @@ Running [rTorrent](https://github.com/rakshasa/rtorrent) in [Docker](https://www
 Command
 =======
 
-    docker run -e USER_GID=`id -g` -e USER_UID=`id -g` -i -p 6991:6991 -t -v "`pwd`:/srv/rtorrent" gslin/rtorrent:latest
+    docker run -e TERM=${TERM} -e USER_GID=`id -g` -e USER_UID=`id -g` -i -p 6991:6991 -t -v "`pwd`:/srv/rtorrent" gslin/rtorrent:latest
