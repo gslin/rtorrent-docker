@@ -1,7 +1,10 @@
+rtorrent-docker
+===============
+
 Running [rTorrent](https://github.com/rakshasa/rtorrent) in [Docker](https://www.docker.com/) container.
 
 Command
-=======
+-------
 
 If you don't specify `PORT` then it will be 6991 by default.
 
