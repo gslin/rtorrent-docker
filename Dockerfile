@@ -10,11 +10,10 @@ RUN apt-get update -y && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y rtorrent && \
     apt-get clean
 
-COPY .rtorrent.rc /home/rtorrent/.rtorrent.rc
+COPY .rtorrent.rc.template /home/rtorrent/.rtorrent.rc.template
 COPY entrypoint.sh /sbin/entrypoint.sh
 
-RUN chmod 644 /home/rtorrent/.rtorrent.rc && \
-    chmod 755 /sbin/entrypoint.sh
+RUN chmod 755 /sbin/entrypoint.sh
 
 EXPOSE 6991
 
