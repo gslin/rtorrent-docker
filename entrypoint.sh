@@ -20,4 +20,4 @@ cd /home/rtorrent
 sed -e "s/PORT/${PORT}/g" .rtorrent.rc.template > .rtorrent.rc
 chmod 644 .rtorrent.rc
 
-su - rtorrent -c "cd /srv/rtorrent; mkdir -p session; rtorrent"
+su - rtorrent -c "cd /srv/rtorrent; mkdir -p session; LANG=en_US.UTF-8 rtorrent"

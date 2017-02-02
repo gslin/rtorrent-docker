@@ -8,7 +8,8 @@ RUN apt-get update -y && \
     apt-add-repository -y ppa:crass/libtorrent && \
     apt-get update -y && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y rtorrent && \
-    apt-get clean
+    apt-get clean && \
+    locale-gen en_US.UTF-8
 
 COPY .rtorrent.rc.template /home/rtorrent/.rtorrent.rc.template
 COPY entrypoint.sh /sbin/entrypoint.sh
