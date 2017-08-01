@@ -1,10 +1,10 @@
 #
-FROM ubuntu:xenial-20170119
+FROM ubuntu:xenial-20170710
 MAINTAINER gslin@gslin.org
 
 #
 RUN apt-get update -y && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y software-properties-common && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y locales software-properties-common && \
     apt-add-repository -y ppa:crass/libtorrent && \
     apt-get update -y && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y rtorrent && \
