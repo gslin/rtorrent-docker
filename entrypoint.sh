@@ -16,8 +16,11 @@ else
     useradd -d /home/rtorrent -g "${USER_GID}" -m -s /bin/bash -u "${USER_UID}" rtorrent
 fi
 
-cd /home/rtorrent
+cd ~rtorrent
 sed -e "s/PORT/${PORT}/g" .rtorrent.rc.template > .rtorrent.rc
 chmod 644 .rtorrent.rc
 
-su - rtorrent -c "cd /srv/rtorrent; mkdir -p session; LANG=en_US.UTF-8 rtorrent"
+mkdir -p session
+chown rtorrent:rtorrent session
+
+sudo -i -u rtorrent -- bash -c "cd /srv/rtorrent; LANG=en_US.UTF-8 rtorrent"
