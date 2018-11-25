@@ -3,12 +3,12 @@ FROM ubuntu:xenial-20180123
 MAINTAINER gslin@gslin.org
 
 #
-RUN apt-get update -y && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y locales software-properties-common sudo && \
+RUN apt update -y && \
+    DEBIAN_FRONTEND=noninteractive apt install -y locales software-properties-common sudo && \
     apt-add-repository -y ppa:crass/libtorrent && \
-    apt-get update -y && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y rtorrent && \
-    apt-get clean && \
+    apt update -y && \
+    DEBIAN_FRONTEND=noninteractive apt install -y rtorrent && \
+    apt clean && \
     locale-gen en_US.UTF-8
 
 COPY .rtorrent.rc.template /home/rtorrent/.rtorrent.rc.template
