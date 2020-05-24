@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PORT=${PORT:-6991}
+BT_PORT=${PORT:-6991}
 
 if [[ "x${USER_GID}" = x ]]; then
     echo "USER_GID is empty."
@@ -17,7 +17,7 @@ else
 fi
 
 cd ~rtorrent
-sed -e "s/PORT/${PORT}/g" .rtorrent.rc.template > .rtorrent.rc
+sed -e "s/BT_PORT/${BT_PORT}/g" .rtorrent.rc.template > .rtorrent.rc
 chmod 644 .rtorrent.rc
 
 mkdir -p session

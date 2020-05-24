@@ -4,6 +4,6 @@ encryption = allow_incoming,try_outgoing,enable_retry
 max_peers = 4096
 max_uploads = 2048
 min_peers = 2048
-port_range = PORT-PORT
+port_range = BT_PORT-BT_PORT
 protocol.pex.set = yes
 session = /srv/rtorrent/session
