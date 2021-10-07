@@ -4,7 +4,7 @@ MAINTAINER gslin@gslin.org
 
 #
 RUN apt update -y && \
-    DEBIAN_FRONTEND=noninteractive apt install -y locales rtorrent && \
+    DEBIAN_FRONTEND=noninteractive apt install -y locales rtorrent sudo && \
     apt clean && \
     locale-gen en_US.UTF-8
 
