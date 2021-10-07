@@ -1,13 +1,10 @@
 #
-FROM ubuntu:xenial-20191108
+FROM ubuntu:focal-20210921
 MAINTAINER gslin@gslin.org
 
 #
 RUN apt update -y && \
-    DEBIAN_FRONTEND=noninteractive apt install -y locales software-properties-common sudo && \
-    apt-add-repository -y ppa:crass/libtorrent && \
-    apt update -y && \
-    DEBIAN_FRONTEND=noninteractive apt install -y rtorrent && \
+    DEBIAN_FRONTEND=noninteractive apt install -y locales rtorrent && \
     apt clean && \
     locale-gen en_US.UTF-8
 
