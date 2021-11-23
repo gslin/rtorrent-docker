@@ -6,7 +6,7 @@ USER_UID=	$(shell id -u)
 
 #
 build:
-	docker build -t "gslin/rtorrent:${NOW}" .
+	DOCKER_BUILDKIT=1 docker build -t "gslin/rtorrent:${NOW}" .
 	docker tag "gslin/rtorrent:${NOW}" gslin/rtorrent:latest
 
 clean:
