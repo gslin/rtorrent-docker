@@ -1,5 +1,5 @@
 #
-FROM ubuntu:focal-20210921
+FROM ubuntu:jammy-20211029
 MAINTAINER gslin@gslin.org
 
 #
