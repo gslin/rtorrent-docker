@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.3-labs
 #
-FROM ubuntu:jammy-20211029
+FROM ubuntu:jammy-20220101
 MAINTAINER gslin@gslin.org
 
 #
