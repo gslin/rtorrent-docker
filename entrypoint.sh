@@ -16,6 +16,8 @@ else
     useradd -d /home/rtorrent -g "${USER_GID}" -m -s /bin/bash -u "${USER_UID}" rtorrent
 fi
 
+echo "nameserver 127.0.0.1" > /etc/resolv.conf
+
 cd ~rtorrent
 sed -e "s/BT_PORT/${BT_PORT}/g" .rtorrent.rc.template > .rtorrent.rc
 chmod 644 .rtorrent.rc

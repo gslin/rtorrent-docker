@@ -1,12 +1,12 @@
 # syntax=docker/dockerfile:1.3-labs
 #
-FROM ubuntu:jammy-20220101
+FROM ubuntu:jammy-20220130
 MAINTAINER gslin@gslin.org
 
 #
 RUN <<EOF bash
   apt update -y
-  DEBIAN_FRONTEND=noninteractive apt install -y locales rtorrent sudo
+  DEBIAN_FRONTEND=noninteractive apt install -y locales rtorrent sudo unbound
   apt clean
   locale-gen en_US.UTF-8
 EOF
