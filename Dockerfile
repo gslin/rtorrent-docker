@@ -6,7 +6,7 @@ MAINTAINER gslin@gslin.org
 #
 RUN <<EOF bash
   apt update -y
-  DEBIAN_FRONTEND=noninteractive apt install -y locales rtorrent sudo unbound
+  DEBIAN_FRONTEND=noninteractive apt install -y dnsmasq locales rtorrent sudo
   apt clean
   locale-gen en_US.UTF-8
 EOF
