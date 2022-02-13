@@ -16,6 +16,7 @@ else
     useradd -d /home/rtorrent -g "${USER_GID}" -m -s /bin/bash -u "${USER_UID}" rtorrent
 fi
 
+service dnsmasq start
 echo "nameserver 127.0.0.1" > /etc/resolv.conf
 
 cd ~rtorrent
