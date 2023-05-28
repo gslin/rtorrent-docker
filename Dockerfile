@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.3-labs
 #
-FROM debian:bullseye-20230522-slim
+FROM ubuntu:jammy-20230425
 MAINTAINER gslin@gslin.org
 
 #
