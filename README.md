@@ -1,9 +1,9 @@
 rtorrent-docker
 ===============
 
-Running [rTorrent](https://github.com/rakshasa/rtorrent) in a [Docker](https://www.docker.com/) container for isolation, based on Ubuntu 20.04 and system rtorrent.
+Running [rTorrent](https://github.com/rakshasa/rtorrent) in a [Docker](https://www.docker.com/) container for isolation, based on Ubuntu 22.04 and self-compiled rtorrent.
 
-This package also has implemented an workaround for the [hanging bug](https://github.com/rakshasa/rtorrent/issues/180), so it also runs dnsmasq.
+This package also has implemented two workarounds for the [hanging bug](https://github.com/rakshasa/rtorrent/issues/180), one is running dnsmasq, another one is use of libudns.
 
 Command
 -------
