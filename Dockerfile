@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.3-labs
 #
-FROM debian:bookworm-20250520
+FROM debian:bookworm-20250610
 MAINTAINER gslin@gslin.org
 
 #
@@ -11,7 +11,7 @@ RUN <<EOF bash
   cd ~
   git clone https://github.com/rakshasa/libtorrent.git
   cd libtorrent
-  git checkout 51754143339bdd642aac7974798f2d447496296e
+  git checkout 003edc90f764d2e3320e951b314885be940cce34
   autoreconf -fi
   ./configure --prefix=/usr
   make -j8
@@ -19,7 +19,7 @@ RUN <<EOF bash
   cd ~
   git clone https://github.com/rakshasa/rtorrent.git
   cd rtorrent
-  git checkout 7bbd9a02a091e57a4b5913b202d1f5967baf4bce
+  git checkout 51754143339bdd642aac7974798f2d447496296e
   autoreconf -fi
   ./configure --prefix=/usr
   make -j8
