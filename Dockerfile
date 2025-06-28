@@ -11,7 +11,7 @@ RUN <<EOF bash
   cd ~
   git clone https://github.com/rakshasa/libtorrent.git
   cd libtorrent
-  git checkout 003edc90f764d2e3320e951b314885be940cce34
+  git checkout v0.15.5
   autoreconf -fi
   ./configure --prefix=/usr
   make -j8
@@ -19,7 +19,7 @@ RUN <<EOF bash
   cd ~
   git clone https://github.com/rakshasa/rtorrent.git
   cd rtorrent
-  git checkout 51754143339bdd642aac7974798f2d447496296e
+  git checkout v0.15.5
   autoreconf -fi
   ./configure --prefix=/usr
   make -j8
