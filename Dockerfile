@@ -1,30 +1,32 @@
 # syntax=docker/dockerfile:1.3-labs
 #
-FROM ubuntu:jammy-20230425
+FROM debian:bookworm-20250520
 MAINTAINER gslin@gslin.org
 
 #
 RUN <<EOF bash
   apt update -y
-  apt install -y autoconf build-essential dnsmasq git libcurl4-openssl-dev libssl-dev libtool libncursesw5-dev libudns-dev locales pkg-config sudo zlib1g-dev
+  apt install -y autoconf build-essential git libcurl4-openssl-dev libssl-dev libtool libncursesw5-dev locales pkg-config sudo zlib1g-dev
   apt clean
   cd ~
   git clone https://github.com/rakshasa/libtorrent.git
   cd libtorrent
-  git checkout slingamn-udns.10
+  git checkout 51754143339bdd642aac7974798f2d447496296e
   autoreconf -fi
-  ./configure --prefix=/usr --with-udns
-  make -j
+  ./configure --prefix=/usr
+  make -j8
   make install
   cd ~
   git clone https://github.com/rakshasa/rtorrent.git
   cd rtorrent
-  git checkout 582e4e40256b43d3e5322168f1e1ed71ca70ab64
+  git checkout 7bbd9a02a091e57a4b5913b202d1f5967baf4bce
   autoreconf -fi
   ./configure --prefix=/usr
-  make -j
+  make -j8
   make install
   apt purge -y autoconf build-essential git libcurl4-openssl-dev libssl-dev libtool libncursesw5-dev libudns-dev pkg-config zlib1g-dev
+  rm -rf libtorrent rtorrent
+  sed -i 's/^# en_US.UTF-8/en_US.UTF-8/' /etc/locale.gen
   locale-gen en_US.UTF-8
 EOF
 
